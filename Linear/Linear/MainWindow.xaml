@@ -1,0 +1,34 @@
+﻿<Window x:Class="LinearAlg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinearAlg"
+        mc:Ignorable="d" FontSize="20"
+        Title="Лаб №1" Height="500" Width="450" MinHeight="300" MinWidth="200" MaxWidth="1000" MaxHeight="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Введите значение X:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="textX" Grid.Row="0" Grid.Column="1" Background="red"  Margin="10 15 10 15"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Введите значение Y:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="textY" Grid.Row="1" Grid.Column="1" Background="red"  Margin="10 15 10 15"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Введите значение Z:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="textZ" Grid.Row="2" Grid.Column="1" Background="red"  Margin="10 15 10 15"/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Vertical">
+            <Label Content="Результат выполнения программы:"/>
+            <TextBox Height="150" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" x:Name="Result" Margin="5 10 5 10" Background="Red"/>
+        </StackPanel>
+        <Button Content="Выполнить" Grid.Column="1" Grid.Row="4" Margin="100 20 10 20" Click="Button_Click"/>
+    </Grid>
+</Window>

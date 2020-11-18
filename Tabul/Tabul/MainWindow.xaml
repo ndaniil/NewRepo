@@ -1,0 +1,36 @@
+﻿<Window x:Class="Tabul.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tabul"
+        mc:Ignorable="d"
+        Title="Табулирование" Height="450" Width="450" Background="PaleGoldenrod" FontSize="15">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="1.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="X0" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="X0" Grid.Row="0" Grid.Column="1" Margin="8 8 8 8" />
+        <Label Content="Xk" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="Xk" Grid.Row="1" Grid.Column="1" Margin="8 8 8 8" />
+        <Label Content="Dx" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="Dx" Grid.Row="2" Grid.Column="1" Margin="8 8 8 8" />
+        <Label Content="A" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="A" Grid.Row="3" Grid.Column="1" Margin="8 8 8 8" />
+        <Label Content="B" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="B" Grid.Row="4" Grid.Column="1" Margin="8 8 8 8" />
+        <Button Content="Вычислить" Grid.Row="5" Grid.Column="1" Margin="100 3" Click="Button_Click"/>
+        <TextBlock x:Name="Result" Grid.Row="6" Grid.ColumnSpan="2" Background="White"/>
+    </Grid>
+</Window>
